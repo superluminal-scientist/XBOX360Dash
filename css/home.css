@@ -1,0 +1,75 @@
+.home-frame {
+  position: absolute;
+  left: 220px;
+  top: 11px;
+  width: 764px;
+  height: 368px;
+}
+
+.tray-scrim { position: absolute; inset: 0; background: rgba(96, 182, 22, 0.4); display: block; }
+
+.tray-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.91);
+  transform: translate(-50%, calc(-50% - 7px));
+  display: block;
+}
+
+.tray-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #60B616;
+  transform: translate(-50%, calc(-50% - 7px));
+  display: block;
+}
+
+.tray-label {
+  left: 13px;
+  bottom: 10px;
+  font-size: 18px;
+  max-width: 152px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pin-glyph {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  transform: translate(-50%, calc(-50% - 10px));
+  background-image: url("../assets/Misc/pin.png");
+  background-size: 148.9px 99.31px;
+  background-position: -55.65px -26.56px;
+  display: block;
+}
+
+.clock-glyph {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% - 10px));
+}
+
+.espn-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 31px;
+  background: #6F1414;
+  display: flex;
+  align-items: center;
+}
+
+.espn-footer span { color: #FFFFFF; font-size: 16px; margin-left: 8px; }

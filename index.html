@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DashX360 Web Edition</title>
+  <link rel="stylesheet" href="css/tiles.css" />
+  <link rel="stylesheet" href="css/metro.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/bing.css" />
+  <link rel="stylesheet" href="css/social.css" />
+  <link rel="stylesheet" href="css/games.css" />
+  <link rel="stylesheet" href="css/music.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/apps.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage">
+
+      
+      <nav class="tab-strip">
+        <button class="tab" data-tab-key="bing"     style="left:180px;width:58px">bing</button>
+        <button class="tab" data-tab-key="home"     style="left:262px;width:78px">home</button>
+        <button class="tab" data-tab-key="social"   style="left:366px;width:86px">social</button>
+        <button class="tab" data-tab-key="media"    style="left:480px;width:82px">video</button>
+        <button class="tab" data-tab-key="games"    style="left:602px;width:94px">games</button>
+        <button class="tab" data-tab-key="music"    style="left:744px;width:88px">music</button>
+        <button class="tab" data-tab-key="apps"     style="left:854px;width:68px">apps</button>
+        <button class="tab" data-tab-key="settings" style="left:942px;width:128px">settings</button>
+      </nav>
+      <div class="profile-chip">
+        <div class="profile-text">
+          <div id="profile-gamertag" class="profile-gamertag">Player One</div>
+          <div id="profile-status" class="profile-status">Online</div>
+        </div>
+        <div class="profile-avatar"><img id="profile-avatar" alt="" /></div>
+      </div>
+
+      
+      <main class="content">
+        <section class="tab-section active" id="home-view">
+          <div class="home-frame">
+
+            
+            <button id="tile-tray" class="tile" data-focusable style="left:0;top:0;width:177px;height:122px">
+              <span class="tile-face" style="background:#60B616">
+                <img id="tray-cover" class="tile-cover" alt="" style="display:none" />
+                <span class="tray-scrim"></span>
+                <span class="tray-circle"></span>
+                <span class="tray-dot"></span>
+                <span id="tray-title" class="tile-label tray-label">Open Tray</span>
+              </span>
+            </button>
+            <button id="tile-pins" class="tile" data-focusable style="left:0;top:123px;width:177px;height:122px">
+              <span class="tile-face" style="background:#60B616">
+                <span class="pin-glyph"></span>
+                <span class="tile-label" style="left:12px;bottom:12px;font-size:17px">My Pins</span>
+              </span>
+            </button>
+            <button id="tile-recent" class="tile" data-focusable style="left:0;top:246px;width:177px;height:122px">
+              <span class="tile-face" style="background:#60B616">
+                <svg class="clock-glyph" width="36" height="36" viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="16" fill="none" stroke="rgba(255,255,255,0.91)" stroke-width="4" />
+                  <path d="M18,8 L18,20 L27,20" fill="none" stroke="rgba(255,255,255,0.91)"
+                        stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="tile-label" style="left:12px;bottom:12px;font-size:17px">Recent</span>
+              </span>
+            </button>
+
+            
+            <button id="tile-halo4" class="tile" data-focusable style="left:179px;top:0;width:423px;height:242px">
+              <span class="tile-face" style="background:linear-gradient(135deg,#BFD5D8 0%,#3B5E65 34%,#111A1D 78%,#9EAEB0 100%)">
+                <img class="tile-cover" src="assets/Tiles/halo4home.jpg" alt="" />
+                <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0.141) 0%,rgba(0,0,0,0) 48%,rgba(0,0,0,0.659) 100%)"></span>
+                <span class="tile-bar"></span>
+                <span class="tile-label" style="left:8px;bottom:6px;font-size:17px">Halo 4</span>
+              </span>
+            </button>
+            <button id="tile-dexter" class="tile" data-focusable style="left:179px;top:244px;width:210px;height:124px">
+              <span class="tile-face" style="background:linear-gradient(135deg,#2D100D 0%,#E27522 50%,#321A16 100%)">
+                <img class="tile-cover" src="assets/Tiles/dexterhome.jpg" alt="" />
+                <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.157) 55%,rgba(0,0,0,0.69) 100%)"></span>
+                <span class="tile-bar"></span>
+                <span class="tile-label" style="left:8px;bottom:6px;font-size:17px">Dexter</span>
+              </span>
+            </button>
+            <button id="tile-maroon5" class="tile" data-focusable style="left:391px;top:244px;width:211px;height:124px">
+              <span class="tile-face" style="background:linear-gradient(90deg,#CFCFCF 0%,#50606F 100%)">
+                <img class="tile-cover" src="assets/Tiles/maroon5home.jpg" alt="" />
+                <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.188) 62%,rgba(0,0,0,0.69) 100%)"></span>
+                <span class="tile-bar"></span>
+                <span class="tile-label" style="left:8px;bottom:6px;font-size:17px">Maroon 5</span>
+              </span>
+            </button>
+
+            
+            <button id="tile-kinect" class="tile" data-focusable style="left:604px;top:0;width:160px;height:122px">
+              <span class="tile-face" style="background:linear-gradient(135deg,#171A5C 0%,#9333C4 50%,#10103A 100%)">
+                <img class="tile-cover" src="assets/Tiles/dancecentralhome.jpg" alt="" />
+                <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.141) 58%,rgba(0,0,0,0.69) 100%)"></span>
+                <span class="tile-bar"></span>
+                <span class="tile-label" style="left:8px;bottom:6px;font-size:16px">Kinect Central</span>
+              </span>
+            </button>
+            <button id="tile-espn" class="tile" data-focusable style="left:604px;top:123px;width:160px;height:122px">
+              <span class="tile-face">
+                <img class="tile-cover" src="assets/Tiles/espn.jpg" alt="" />
+                <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.063) 58%,rgba(0,0,0,0.69) 100%)"></span>
+                <span class="espn-footer"><span>Sports</span></span>
+              </span>
+            </button>
+            <button id="tile-youtube" class="tile" data-focusable style="left:604px;top:246px;width:160px;height:122px">
+              <span class="tile-face" style="background:#FFFFFF">
+                <img class="tile-cover" src="assets/Tiles/youtubehome.jpg" alt="" />
+                <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 58%,rgba(0,0,0,0.471) 100%)"></span>
+              </span>
+            </button>
+          </div>
+        </section>
+        <section class="tab-section" id="bing-view">
+          <div class="bing-frame">
+            <div class="bing-tagline">Search Xbox for games, movies, music and apps</div>
+            <div class="bing-wordmark">bing</div>
+            <div id="bing-search" class="bing-search-frame" data-focusable>
+              <input class="bing-search-input" type="text" readonly tabindex="-1" />
+              <svg class="bing-search-glyph" width="50" height="50" viewBox="0 0 50 50">
+                <path d="M17,17 A14,14 0 1 1 36,36 M34,34 L47,47" fill="none"
+                      stroke="rgba(255,255,255,0.949)" stroke-width="5" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </section>
+        <section class="tab-section" id="social-view">
+          <div class="social-frame">
+            <div class="social-art">
+              <span class="social-join"></span>
+              <img class="social-avatars" src="assets/Tiles/Social/transparent_avatars.png" alt="" />
+            </div>
+            <button id="social-friends" class="tile" data-focusable style="left:0;top:0;width:177px;height:122px">
+              <span class="tile-face" style="background:#60B616">
+                <img class="tile-glyph" style="--raise:7.5px;width:58px;height:58px" src="assets/Tiles/Social/friends.png" alt="" />
+                <span class="tile-label" style="left:6px;bottom:8px;font-size:13px">Friends</span>
+              </span>
+            </button>
+            <button id="social-themes" class="tile" data-focusable style="left:0;top:123px;width:177px;height:122px">
+              <span class="tile-face" style="background:#60B616">
+                <img class="tile-glyph" style="--raise:7.5px;width:58px;height:58px" src="assets/Misc/SettingsIcons/preferences.png" alt="" />
+                <span class="tile-label" style="left:6px;bottom:8px;font-size:13px">Themes</span>
+              </span>
+            </button>
+            <button id="social-signin" class="tile" data-focusable style="left:0;top:246px;width:177px;height:122px">
+              <span class="tile-face" style="background:#60B616">
+                <img class="tile-glyph" style="--raise:7.5px;width:58px;height:58px" src="assets/Tiles/Social/sign_in_or_out.png" alt="" />
+                <span class="tile-label" style="left:6px;bottom:8px;font-size:13px">Sign in or Out</span>
+              </span>
+            </button>
+          </div>
+        </section>
+        <section class="tab-section" id="media-view">
+          <button id="media-myvideoapps" class="tile" data-focusable style="left:236px;top:76px;width:146px;height:148px">
+            <span class="tile-face" style="background:#60B616">
+              <img class="tile-glyph-top" style="top:4px;width:144px;height:102px" src="assets/Tiles/Marketplace/my_video_apps_custom.png" alt="" />
+              <span class="tile-label tile-label-multi" style="left:12px;bottom:12px;font-size:22px">My Video
+Apps</span>
+            </span>
+          </button>
+          <button id="media-marketplace" class="tile" data-focusable style="left:236px;top:226px;width:146px;height:148px">
+            <span class="tile-face" style="background:#60B616">
+              <img class="tile-glyph-top" style="top:26px;width:58px;height:58px" src="assets/Tiles/Marketplace/video_marketplace.png" alt="" />
+              <span class="tile-label tile-label-multi" style="left:12px;bottom:12px;font-size:22px">Video
+Marketplace</span>
+            </span>
+          </button>
+          <button id="media-darkknight" class="tile" data-focusable style="left:384px;top:73px;width:308px;height:301px">
+            <span class="tile-face" style="background:linear-gradient(135deg,#F2F0E8 0%,#B59F80 50%,#201712 100%)">
+              <img class="tile-cover" src="assets/Tiles/thedarkkightvideo.jpg" alt="" />
+              <span class="tile-shade" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.094) 54%,rgba(0,0,0,0.659) 100%)"></span>
+              <span class="tile-bar" style="height:46px;background:rgba(0,0,0,0.51)"></span>
+              <span class="tile-label" style="left:12px;bottom:12px;font-size:19px">The Dark Knight</span>
+            </span>
+          </button>
+          <button id="media-cloudy" class="tile" data-focusable style="left:694px;top:73px;width:148px;height:150px">
+            <span class="tile-face" style="background:#33434A">
+              <img class="tile-cover" src="assets/Tiles/cloudywithachanceofmeatballsvideo.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.333)"></span>
+              <span class="tile-label tile-label-multi" style="left:10px;right:8px;bottom:12px;font-size:16px">Cloudy with a
+Chance of Meatballs</span>
+            </span>
+          </button>
+          <button id="media-recent" class="tile" data-focusable style="left:844px;top:73px;width:198px;height:150px">
+            <span class="tile-face" style="background:#FFFFFF">
+              <svg width="198" height="150" viewBox="0 0 198 150" style="position:absolute;inset:0">
+                <path d="M0,115 C70,28 132,82 198,4 L198,150 L0,150 Z" fill="#59B631" />
+              </svg>
+              <span class="tile-label" style="left:20px;top:48px;font-size:30px;color:#2B2B2B">Recent</span>
+            </span>
+          </button>
+          <button id="media-kfp2" class="tile" data-focusable style="left:694px;top:225px;width:148px;height:149px">
+            <span class="tile-face" style="background:#E9C330">
+              <img class="tile-cover" src="assets/Tiles/kungfupanda2video.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.267)"></span>
+              <span class="media-hd-mark">HD</span>
+              <span class="tile-label tile-label-multi" style="left:10px;bottom:12px;font-size:21px">Kung Fu
+Panda 2</span>
+            </span>
+          </button>
+          <button id="media-hbo" class="tile" data-focusable style="left:844px;top:225px;width:198px;height:149px">
+            <span class="tile-face">
+              <img class="tile-cover" src="assets/Tiles/hbogovideo.jpg" alt="" />
+              <span class="tile-label" style="left:0;bottom:-22px;font-size:13px;color:#BFC4C2">ADVERTISEMENT</span>
+            </span>
+          </button>
+        </section>
+        <section class="tab-section" id="games-view">
+          <button id="games-mygames" class="tile" data-focusable style="left:258px;top:74px;width:155px;height:153px">
+            <span class="tile-face" style="background:#60B616">
+              <img class="tile-glyph" style="--raise:9px;width:72px;height:72px" src="assets/Tiles/Marketplace/mygames.png" alt="" />
+              <span class="tile-label" style="left:15px;bottom:12px;font-size:22px">My Games</span>
+            </span>
+          </button>
+          <button id="games-marketplace" class="tile" data-focusable style="left:258px;top:229px;width:155px;height:149px">
+            <span class="tile-face" style="background:#60B616">
+              <img class="tile-glyph-top" style="top:24px;width:58px;height:58px" src="assets/Tiles/Marketplace/game_marketplace.png" alt="" />
+              <span class="tile-label tile-label-multi" style="left:15px;bottom:12px;font-size:22px">Game
+Marketplace</span>
+            </span>
+          </button>
+          <button id="games-forza" class="tile" data-focusable style="left:415px;top:74px;width:400px;height:303px">
+            <span class="tile-face" style="background:linear-gradient(135deg,#E9F0EA 0%,#7E968C 32%,#17201C 100%)">
+              <img class="tile-cover" src="assets/Tiles/forzahorizongames.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.267)"></span>
+              <span class="tile-bar" style="height:78px;background:rgba(0,0,0,0.561)"></span>
+              <span class="tile-label" style="left:10px;bottom:42px;font-size:24px">Forza Horizon</span>
+              <span class="tile-label" style="left:10px;bottom:12px;font-size:24px;color:rgba(255,255,255,0.875)">December IGN Pack</span>
+            </span>
+          </button>
+          <button id="games-minecraft" class="tile" data-focusable style="left:817px;top:74px;width:200px;height:151px">
+            <span class="tile-face" style="background:linear-gradient(135deg,#0F2719 0%,#6A8D36 60%,#131814 100%)">
+              <img class="tile-cover" src="assets/Tiles/minecraftgames.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.2)"></span>
+              <span class="tile-label" style="left:10px;bottom:14px;font-size:20px">Minecraft</span>
+            </span>
+          </button>
+          <button id="games-blackops" class="tile" data-focusable style="left:817px;top:227px;width:200px;height:150px">
+            <span class="tile-face" style="background:linear-gradient(135deg,#1B1B1F 0%,#376B7B 52%,#111111 100%)">
+              <img class="tile-cover" src="assets/Tiles/blackops2games.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.2)"></span>
+              <span class="tile-label" style="left:10px;bottom:14px;font-size:20px">Black Ops II</span>
+            </span>
+          </button>
+          <div class="games-ad-caption">ADVERTISEMENT</div>
+        </section>
+        <section class="tab-section" id="music-view">
+          <button id="music-mymusic" class="tile" data-focusable style="left:236px;top:76px;width:148px;height:148px">
+            <span class="tile-face" style="background:#60B616">
+              <span class="tile-glyph music-note-glyph" style="--raise:6px"></span>
+              <span class="tile-label" style="left:12px;bottom:12px;font-size:22px">My Music</span>
+            </span>
+          </button>
+          <button id="music-marketplace" class="tile" data-focusable style="left:236px;top:226px;width:148px;height:148px">
+            <span class="tile-face" style="background:#60B616">
+              <img class="tile-glyph-top" style="top:26px;width:58px;height:58px" src="assets/Tiles/Marketplace/music_marketplace.png" alt="" />
+              <span class="tile-label tile-label-multi" style="left:12px;bottom:12px;font-size:22px">Music
+Marketplace</span>
+            </span>
+          </button>
+          <button id="music-nowplaying" class="tile" data-focusable style="left:386px;top:76px;width:306px;height:298px">
+            <span class="tile-face" style="background:linear-gradient(135deg,#232323 0%,#6E2B82 48%,#0D0D0D 100%)">
+              <img class="tile-cover" src="assets/Tiles/overexposedmusic.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.2)"></span>
+              <span class="tile-bar" style="height:56px;background:rgba(0,0,0,0.627)"></span>
+              <span class="tile-label" style="left:12px;bottom:24px;font-size:23px">Now Playing</span>
+              <span class="tile-label" style="left:12px;bottom:8px;font-size:16px;color:rgba(255,255,255,0.875)">Maroon 5 - Overexposed</span>
+            </span>
+          </button>
+          <button id="music-recent" class="tile" data-focusable style="left:694px;top:76px;width:158px;height:148px">
+            <span class="tile-face" style="background:#2F6F9F">
+              <img class="tile-cover" src="assets/Tiles/evanescencerecent.png" alt="" />
+              <span class="tile-shade" style="background:rgba(0,0,0,0.2)"></span>
+              <span class="tile-label" style="left:10px;bottom:12px;font-size:22px">recent</span>
+            </span>
+          </button>
+          <button id="music-search" class="tile" data-focusable style="left:854px;top:76px;width:188px;height:148px">
+            <span class="tile-face" style="background:#191919">
+              <span class="tile-label" style="left:10px;bottom:12px;font-size:23px">search</span>
+            </span>
+          </button>
+          <button id="music-apps" class="tile" data-focusable style="left:694px;top:226px;width:348px;height:148px">
+            <span class="tile-face" style="background:#E8E8E8">
+              <img class="tile-cover" src="assets/Tiles/panchikomusic.jpg" alt="" />
+              <span class="tile-shade" style="background:rgba(255,255,255,0.333)"></span>
+              <span class="tile-label" style="left:14px;bottom:12px;font-size:24px;color:#303030">music apps</span>
+            </span>
+          </button>
+        </section>
+        <section class="tab-section" id="apps-view">
+          <div class="apps-frame">
+            <button id="apps-myapps" class="tile" data-focusable style="left:0;top:0;width:148px;height:148px">
+              <span class="tile-face" style="background:#60B616">
+                <span class="tile-glyph apps-myapps-glyph" style="--raise:9px"></span>
+                <span class="tile-label" style="left:12px;bottom:12px;font-size:22px">My Apps</span>
+              </span>
+            </button>
+            <button id="apps-browse" class="tile" data-focusable style="left:0;top:150px;width:148px;height:148px">
+              <span class="tile-face" style="background:#60B616">
+                <img class="tile-glyph-top" style="top:26px;width:58px;height:58px" src="assets/Tiles/Marketplace/apps_marketplace.png" alt="" />
+                <span class="tile-label tile-label-multi" style="left:12px;bottom:12px;font-size:22px">Browse
+Apps</span>
+              </span>
+            </button>
+            <button id="apps-hbogo" class="tile" data-focusable style="left:150px;top:0;width:306px;height:298px">
+              <span class="tile-face" style="background:#000000">
+                <img class="tile-cover" src="assets/Tiles/hbogoapps.jpg" alt="" />
+                <span class="tile-shade" style="background:rgba(0,0,0,0.2)"></span>
+                <span class="apps-hbogo-caption">Watch with Xbox LIVE Gold</span>
+              </span>
+            </button>
+            <button id="apps-netflix" class="tile" data-focusable style="left:458px;top:0;width:158px;height:148px">
+              <span class="tile-face" style="background:#E3262E">
+                <img class="tile-cover" src="assets/Tiles/netflixapps.png" alt="" />
+                <span class="apps-netflix-caption">instant queue</span>
+              </span>
+            </button>
+            <button id="apps-youtube" class="tile" data-focusable style="left:618px;top:0;width:188px;height:148px">
+              <span class="tile-face" style="background:#111111">
+                <img class="tile-cover" src="assets/Tiles/youtubeapps.jpg" alt="" />
+              </span>
+            </button>
+            <button id="apps-discord" class="tile" data-focusable style="left:458px;top:150px;width:158px;height:148px">
+              <span class="tile-face" style="background:#5865F2">
+                <img class="tile-cover" src="assets/Tiles/discord-tile.png" alt="" />
+              </span>
+            </button>
+            <button id="apps-browser" class="tile" data-focusable style="left:618px;top:150px;width:188px;height:148px">
+              <span class="tile-face" style="background:#2B5797">
+                <img class="tile-cover" src="assets/Tiles/browser-tile.png" alt="" />
+              </span>
+            </button>
+          </div>
+        </section>
+        <section class="tab-section" id="settings-view">
+          <div class="settings-frame">
+            <div class="settings-grid">
+              <button id="settings-system" class="tile settings-mini" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:39px;height:39px" src="assets/Misc/SettingsIcons/system.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">System</span>
+                </span>
+              </button>
+              <button id="settings-preferences" class="tile settings-mini" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:39px;height:39px" src="assets/Misc/SettingsIcons/preferences.png" alt="" />
+                  <span class="tile-label" style="left:4px;bottom:5px;font-size:9px">Preferences</span>
+                </span>
+              </button>
+              <button id="settings-profile" class="tile settings-mini" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:39px;height:39px" src="assets/Misc/SettingsIcons/account.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">Profile</span>
+                </span>
+              </button>
+              <button id="settings-kinect" class="tile settings-mini" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:41px;height:41px" src="assets/Misc/SettingsIcons/kinect.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">Kinect</span>
+                </span>
+              </button>
+              <button id="settings-account" class="tile settings-mini settings-dim" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:39px;height:39px" src="assets/Misc/SettingsIcons/account.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">Account</span>
+                </span>
+              </button>
+              <button id="settings-privacy" class="tile settings-mini settings-dim" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:39px;height:39px" src="assets/Misc/SettingsIcons/privacy.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">Privacy</span>
+                </span>
+              </button>
+              <button id="settings-family" class="tile settings-mini" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:39px;height:39px" src="assets/Misc/SettingsIcons/family.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">Family</span>
+                </span>
+              </button>
+              <button id="settings-turnoff" class="tile settings-mini" data-focusable>
+                <span class="tile-face" style="background:#5EAE19">
+                  <img class="tile-glyph" style="--raise:4.5px;width:40px;height:40px" src="assets/Misc/SettingsIcons/turnoff.png" alt="" />
+                  <span class="tile-label" style="left:5px;bottom:5px;font-size:10px">Turn Off</span>
+                </span>
+              </button>
+            </div>
+            <div class="settings-disclaimer">Unofficial non-commercial fan project. Xbox and related names, logos, and imagery are property of Microsoft. Not affiliated with or endorsed by Microsoft.</div>
+          </div>
+        </section>
+        <div id="preview-left" class="preview-sliver" style="left:0"></div>
+        <div id="preview-right" class="preview-sliver" style="left:1160px"></div>
+      </main>
+
+      
+      <footer class="footer">
+        <div class="legend">
+          <span class="legend-circle" style="background:#6CB344">A</span><span class="legend-text"> Select   </span><span class="legend-circle" style="background:#E0C33C">Y</span><span class="legend-text"> Eject</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+  <script>
+    (function () {
+      var stage = document.getElementById('stage');
+      function fit() {
+        var scale = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+        stage.style.transform = 'scale(' + scale + ')';
+      }
+      window.addEventListener('resize', fit);
+      fit();
+    })();
+  </script>
+</body>
+</html>
