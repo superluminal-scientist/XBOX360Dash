@@ -1,0 +1,221 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+#boot-overlay {
+  position: fixed;
+  inset: 0;
+  background: #FFFFFF;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.22s ease-out;
+}
+
+#boot-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #FFFFFF;
+  display: block;
+}
+
+#boot-start {
+  position: absolute;
+  inset: 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9EA3A5;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+html, body, #viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0B0F0B;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  user-select: none;
+  cursor: default;
+}
+
+#stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1280px;
+  height: 720px;
+  margin-left: -640px;
+  margin-top: -360px;
+  transform-origin: center;
+  overflow: hidden;
+  
+  background: linear-gradient(180deg, #3C4143 0%, #666B6D 42%, #C7C9C8 100%);
+}
+
+#stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(85% 70% at 28% 22%,
+    rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0) 100%);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tab-strip {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 1280px;
+  height: 46px;
+  z-index: 2;
+}
+
+.tab {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.447);           
+  font-family: "Segoe UI", sans-serif;
+  font-size: 27px;
+  font-weight: 300;                             
+  line-height: 1;
+  
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: -5px;
+  padding-top: 0;
+  text-align: center;
+  transform-origin: 50% 55%;
+  transition: transform 0.13s ease-out, color 0.13s ease-out;
+  cursor: pointer;
+}
+
+.tab:hover { color: rgba(255, 255, 255, 0.949); }   
+
+.tab.selected {
+  color: rgba(255, 255, 255, 0.949);
+  transform: scale(1.025);
+  transition: transform 0.18s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.18s ease-out;
+}
+
+.profile-chip {
+  position: absolute;
+  top: 72px;
+  right: 70px;
+  display: flex;
+  align-items: center;
+  opacity: 0.82;
+  z-index: 2;
+}
+
+.profile-text { text-align: right; margin-right: 8px; }
+.profile-gamertag { color: rgba(255, 255, 255, 0.949); font-size: 13px; font-weight: 600; }
+.profile-status { color: rgba(255, 255, 255, 0.784); font-size: 10px; margin-top: -1px; }
+
+.profile-avatar {
+  width: 24px;
+  height: 24px;
+  background: #008A00;                          
+  overflow: hidden;
+}
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.content {
+  position: absolute;
+  top: 146px;
+  left: 0;
+  width: 1280px;
+  height: 502px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#placeholder-view {
+  display: none;
+  position: absolute;
+  inset: 0;
+  padding: 40px 0 0 220px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.footer {
+  position: absolute;
+  top: 648px;
+  left: 0;
+  width: 1280px;
+  height: 72px;
+  z-index: 2;
+}
+
+.legend {
+  position: absolute;
+  left: 112px;
+  
+  top: 34px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.legend-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend-text { font-size: 16px; white-space: pre; }
+
+.preview-sliver {
+  position: absolute;
+  top: 0;
+  width: 104px;
+  height: 502px;
+  overflow: hidden;
+  opacity: 0.36;
+  pointer-events: none;
+  z-index: 20; 
+}
+
+.preview-content {
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  height: 502px;
+}
+
+.transition-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 502px;
+  z-index: 6;
+  transition: transform 385ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.transition-panel {
+  position: absolute;
+  top: 0;
+  width: 1280px;
+  height: 502px;
+  overflow: hidden;
+}

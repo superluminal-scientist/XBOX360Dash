@@ -1,0 +1,36 @@
+.social-frame {
+  position: absolute;
+  left: 198px;
+  top: 11px;
+  width: 764px;
+  height: 368px;
+}
+
+.social-art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.social-join {
+  position: absolute;
+  left: 539.4px;
+  top: 78px;
+  width: 221.17px;
+  height: 168px;
+  opacity: 0.82;
+  background-image: url("../assets/Tiles/Social/join_the_fun_text.png");
+  background-size: 434.43px 289.62px;
+  background-position: -83.15px -28.85px;
+  display: block;
+}
+
+.social-avatars {
+  position: absolute;
+  left: 219px;
+  top: 87px;
+  width: 300px;
+  height: 256px;
+  object-fit: contain;
+  opacity: 0.96;
+}
