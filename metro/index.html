@@ -15,6 +15,51 @@
   <link rel="stylesheet" href="css/settings.css" />
 </head>
 <body>
+  <div id="boot-overlay">
+    <video id="boot-video" src="assets/Boot/Boot%20Screen.mp4" muted playsinline preload="auto"></video>
+    <div id="boot-start">click to start</div>
+  </div>
+  <script>
+    (function () {
+      var overlay = document.getElementById('boot-overlay');
+      var video = document.getElementById('boot-video');
+      var gate = document.getElementById('boot-start');
+      var audio = new Audio('assets/Audio/Sounds/' + encodeURI('02. Startup (2010).mp3'));
+      var started = false;
+      var done = false;
+      function start(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        if (started) { return; }
+        started = true;
+        document.removeEventListener('keydown', start, true);
+        overlay.removeEventListener('mousedown', start, true);
+        gate.remove();
+        video.play().catch(function () {});
+        audio.play().catch(function () {});
+        document.addEventListener('keydown', onSkip, true);
+        overlay.addEventListener('mousedown', onSkip, true);
+        video.addEventListener('ended', finish);
+        setTimeout(finish, 12000);
+      }
+      function finish() {
+        if (done) { return; }
+        done = true;
+        try { video.pause(); } catch (e) {}
+        try { audio.pause(); } catch (e) {}
+        document.removeEventListener('keydown', onSkip, true);
+        overlay.style.opacity = '0';
+        setTimeout(function () { overlay.remove(); }, 240);
+      }
+      function onSkip(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        finish();
+      }
+      document.addEventListener('keydown', start, true);
+      overlay.addEventListener('mousedown', start, true);
+    })();
+  </script>
   <div id="viewport">
     <div id="stage">
 
